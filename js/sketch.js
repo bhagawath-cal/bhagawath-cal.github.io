@@ -5,13 +5,13 @@ let bounds;
 const textToDisplay = "Bhagawath";
 
 function preload() {
-  font = loadFont('https://cdnjs.cloudflare.com/ajax/libs/topcoat/0.8.0/font/SourceCodePro-Regular.ttf');
+  //font = loadFont('https://cdnjs.cloudflare.com/ajax/libs/topcoat/0.8.0/font/SourceCodePro-Regular.ttf');
 }
 
 function setup() {
   const canvas = createCanvas(windowWidth, windowHeight);
   canvas.parent('canvas-container');
-  textFont(font);
+  //textFont(font);
   textSize(200);
   bounds = font.textBounds(textToDisplay, 0, 0, 200);
   const x = (width - bounds.w) / 2;
