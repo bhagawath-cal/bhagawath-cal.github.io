@@ -48,8 +48,8 @@ body {
 }
 
 .section {
-  padding: 6rem 2rem;
-  min-height: 100vh;
+  padding: 4rem 1.5rem;
+  min-height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
