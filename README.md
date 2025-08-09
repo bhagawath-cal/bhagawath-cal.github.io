@@ -1,17 +1,28 @@
-# v3
+# Portfolio Starter (Brittany Chiang–style)
 
-Third iteration of my personal website built with Jekyll.
+This is a drop-in bundle you can merge into a fork of [bchiang7/bchiang7.github.io].
 
-> 📢 **PSA for those who want to fork or copy this repo and use it for their own site:**
->
-> Please be a decent person and give me proper credit by linking back to my website! Refer to this handy [quora post](https://www.quora.com/Is-it-bad-to-copy-other-peoples-code) if you're not sure.
+## Quick Start
 
-## Dependencies
+1. **Create the repo**
+   - Fork the original repo, or create a new repo and copy these files in.
+   - If you name it `yourusername.github.io`, GitHub Pages will auto-host it.
 
-- [Gulp](https://gulpjs.com/)
+2. **Install & Run Locally (optional)**
+   ```bash
+   gem install bundler jekyll jekyll-minifier jekyll-sitemap jekyll-feed jekyll-seo-tag
+   npm install
+   jekyll serve
+   ```
 
-## Getting Started
+3. **Customize**
+   - Edit `_config.yml` with your URL once you know it.
+   - Update data in `_data/experience.yml`, `_data/education.yml`, `_data/skills.yml`, and `_data/projects.yml`.
+   - Accent color is set to **#7AA2F7** in `assets/css/custom.css` (change `--accent`).
 
-1.  `gem install jekyll sass bundler jekyll-minifier jekyll-sitemap`
-2.  `npm install`
-3.  `npm start`
+4. **Deploy**
+   - Push to `main`/`master` on GitHub. Enable Pages if needed: Settings → Pages → Deploy from branch.
+
+## Notes
+- Your resume is at `/static/resume.pdf` and linked from the header.
+- Add images to `/img` and reference them in `_data/projects.yml`.

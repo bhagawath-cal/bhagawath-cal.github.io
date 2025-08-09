@@ -1,0 +1,14 @@
+- school: "University of Michigan"
+  degree: "B.S. Computer Science, Statistics & Economics"
+  gpa: "3.5"
+  timeframe: "Aug 2022 – May 2025"
+  details:
+    - "University Honors"
+    - "Courses: NLP, Computer Vision, AI, Deep Learning, Bayesian Data Analysis, Applied Linear Regression, Econometrics, Corporate Governance & Finance, Game Theory & Strategy, Machine Learning"
+- school: "UMass Amherst"
+  degree: "B.S. Computer Science & Mathematics (transfer)"
+  gpa: "3.7"
+  timeframe: "Aug 2020 – May 2022"
+  details:
+    - "Dean’s List every term; Chancellor’s Scholarship"
+    - "Courses: Programming Methodologies, Discrete Math, Data Structures, Linear Algebra"

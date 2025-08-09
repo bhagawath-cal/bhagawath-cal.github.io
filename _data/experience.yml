@@ -1,44 +1,27 @@
-- company: Upstatement
-  url: https://www.upstatement.com/
-  time: May 2018 - Present
-  position: Engineer
-
-- company: Scout
-  url: https://web.northeastern.edu/scout/
-  time: Jan - June 2018
-  position: Studio Developer
-
-- company: Apple Music
-  url: https://www.apple.com/music/
-  time: July - Dec 2017
-  position: UI Engineer Co-op
-
-- company: Scout
-  url: https://web.northeastern.edu/scout/
-  time: Jan - June 2017
-  position: Studio Developer
-
-- company: Starry
-  url: https://starry.com/
-  time: July - Dec 2016
-  position: Software Engineer Co-op
-
-- company: Northeastern University
-  url: http://www.ccis.northeastern.edu/
-  time: Jan - May 2016
-  position: HCI Teaching Assistant
-
-- company: NU Women in Tech
-  url: http://nuwit.ccs.neu.edu/
-  time: Jan 2016 - May 2017
-  position: President & Web Chair
-
-- company: MullenLowe U.S.
-  url: https://us.mullenlowe.com/
-  time: July - Dec 2015
-  position: Creative Technologist Co-op
-
-- company: Northeastern University
-  url: http://www.ccis.northeastern.edu/
-  time: Mar - May 2015
-  position: HCI Research Assistant
+- company: "ObjectOne Information Systems Limited"
+  position: "Data Analyst Intern"
+  location: "Remote"
+  timeframe: "Jul 2023 – Present"
+  points:
+    - "Analyzed video consumption trends across Facebook/Instagram/YouTube to inform content strategy."
+    - "Built an ARIMA forecasting model improving prediction accuracy by 18% and reducing error by 12%."
+    - "Engineered an RNN/CNN speech-recognition pipeline increasing phoneme accuracy by 12%."
+- company: "ITS (University of Michigan)"
+  position: "Student Manager & Tech Consultant"
+  location: "Ann Arbor, MI"
+  timeframe: "Jun 2023 – May 2025"
+  points:
+    - "Supported ~3,000 users/month at Campus Computing Sites with ~95% satisfaction."
+    - "Diagnosed hardware/software issues; led onboarding and training for 20+ student consultants."
+- company: "ITS Tech Shop"
+  position: "Sales Consultant"
+  location: "Ann Arbor, MI"
+  timeframe: "Jan 2023 – May 2025"
+  points:
+    - "Guided purchases and product comparisons; analyzed interaction data to surface FAQs."
+- company: "TeluguOne"
+  position: "SEO Intern"
+  location: "Hyderabad, India"
+  timeframe: "Jul 2019 – Mar 2020"
+  points:
+    - "Drove +30% organic traffic through on-page optimization; boosted CTR by 20% and revenue by 15%."
