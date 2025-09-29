@@ -40,15 +40,35 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // --- Profile Picture Slideshow ---
+    const profileImages = document.querySelectorAll('.profile-image');
+    let currentImageIndex = 0;
+
+    function nextImage() {
+        if (profileImages.length === 0) return;
+
+        profileImages[currentImageIndex].classList.remove('active');
+        currentImageIndex = (currentImageIndex + 1) % profileImages.length;
+        profileImages[currentImageIndex].classList.add('active');
+    }
+
+    // Start slideshow only if there's more than one image
+    if (profileImages.length > 1) {
+        setInterval(nextImage, 5000); // Change image every 5 seconds
+    } else if (profileImages.length === 1) {
+        profileImages[0].classList.add('active'); // Ensure single image is visible
+    }
+
+
     // --- Skills Section Stepper ---
     const skillSteps = document.querySelectorAll('.stepper-step');
     const skillGroups = document.querySelectorAll('.skill-group');
     const skillCategoryTitle = document.getElementById('skill-category-title');
     const stepperProgress = document.getElementById('stepper-progress');
     
-    // Updated for seven categories
-    const categoryNames = ["Languages & Scripting", "Databases & Backend", "ML & Data Processing", "Cloud & DevOps", "Programming Concepts", "Quantum & Advanced AI", "Finance & Corporate"];
-    const progressWidths = ["0%", "16.6%", "33.3%", "50%", "66.6%", "83.3%", "100%"];
+    // Updated for eight categories
+    const categoryNames = ["Languages & Scripting", "Databases & Backend", "ML & Data Processing", "Cloud & DevOps", "Programming Concepts", "Quantum & Advanced AI", "Finance & Corporate", "IDEs & Operating Systems"];
+    const progressWidths = ["0%", "14.2%", "28.5%", "42.8%", "57.1%", "71.4%", "85.7%", "100%"];
 
     function switchSkillCategory(targetStep) {
         const stepIndex = parseInt(targetStep) - 1;
