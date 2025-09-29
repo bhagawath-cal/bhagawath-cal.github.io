@@ -40,46 +40,21 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // --- Profile Picture Slideshow ---
-    const profileImages = document.querySelectorAll('.profile-image');
-    let currentImageIndex = 0;
-
-    function nextImage() {
-        if (profileImages.length === 0) return;
-
-        profileImages[currentImageIndex].classList.remove('active');
-        currentImageIndex = (currentImageIndex + 1) % profileImages.length;
-        profileImages[currentImageIndex].classList.add('active');
-    }
-
-    // Start slideshow only if there's more than one image
-    if (profileImages.length > 1) {
-        setInterval(nextImage, 5000); // Change image every 5 seconds
-    } else if (profileImages.length === 1) {
-        profileImages[0].classList.add('active'); // Ensure single image is visible
-    }
-
-
     // --- Skills Section Stepper ---
     const skillSteps = document.querySelectorAll('.stepper-step');
     const skillGroups = document.querySelectorAll('.skill-group');
     const skillCategoryTitle = document.getElementById('skill-category-title');
     const stepperProgress = document.getElementById('stepper-progress');
     
-    // Updated for eight categories
     const categoryNames = ["Languages & Scripting", "Databases & Backend", "ML & Data Processing", "Cloud & DevOps", "Programming Concepts", "Quantum & Advanced AI", "Finance & Corporate", "IDEs & Operating Systems"];
     const progressWidths = ["0%", "14.2%", "28.5%", "42.8%", "57.1%", "71.4%", "85.7%", "100%"];
 
     function switchSkillCategory(targetStep) {
         const stepIndex = parseInt(targetStep) - 1;
 
-        // Update Category Title
         skillCategoryTitle.textContent = categoryNames[stepIndex];
-
-        // Update Progress Bar
         stepperProgress.style.width = progressWidths[stepIndex];
         
-        // Update Active Step Icon
         skillSteps.forEach(step => {
             step.classList.remove('active');
             if(step.dataset.step === targetStep) {
@@ -87,7 +62,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        // Update Active Skill Group
         skillGroups.forEach(group => {
             group.classList.remove('active');
             if(group.dataset.group === targetStep) {
@@ -102,6 +76,20 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Initialize the first category
     switchSkillCategory("1");
+
+    // --- Certifications Accordion ---
+    const collapsibles = document.querySelectorAll('.collapsible');
+
+    collapsibles.forEach(item => {
+        item.addEventListener('click', function() {
+            this.classList.toggle('active');
+            const content = this.nextElementSibling;
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    });
 });

@@ -99,22 +99,12 @@ header {
     overflow: hidden;
     border: 4px solid var(--accent-color);
     flex-shrink: 0;
-    position: relative; /* Essential for absolute positioning of images */
 }
 
-.profile-image {
-    position: absolute;
-    top: 0;
-    left: 0;
+.profile-picture-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0; /* All images start hidden */
-    transition: opacity 1s ease-in-out; /* Smooth transition for fade */
-}
-
-.profile-image.active {
-    opacity: 1; /* The active image is visible */
 }
 
 .header-text {
@@ -150,6 +140,56 @@ section { padding: 4rem 0; }
 .card ul { padding-left: 20px; margin-top: 1rem; color: var(--secondary-text-color); }
 
 
+/* NEW CERTIFICATIONS SECTION STYLES */
+.collapsible {
+    cursor: pointer;
+    margin-bottom: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.collapsible h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.collapsible .fa-chevron-down {
+    transition: transform 0.3s ease;
+}
+
+.collapsible.active .fa-chevron-down {
+    transform: rotate(180deg);
+}
+
+.cert-content {
+    padding: 0 1.5rem;
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--border-color);
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    margin-bottom: 1.5rem;
+}
+
+.cert-content ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.cert-content ul li {
+    padding: 0.5rem 0;
+}
+
+.cert-content ul, .cert-content p {
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+    margin: 0;
+    color: var(--secondary-text-color);
+}
+
 /* SKILLS SECTION STYLES */
 #skills {
     text-align: center;
@@ -162,7 +202,7 @@ section { padding: 4rem 0; }
 
 .skill-content-switcher {
     margin: 3rem 0;
-    min-height: 120px; /* Reserve space to prevent layout shifts */
+    min-height: 120px;
     position: relative;
     display: flex;
     align-items: center;
@@ -192,7 +232,7 @@ section { padding: 4rem 0; }
     align-items: center;
     gap: 0.75rem;
     position: relative;
-    padding-bottom: 8px; /* Space for the underline */
+    padding-bottom: 8px;
 }
 
 .skill-item p {
