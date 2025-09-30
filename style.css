@@ -130,7 +130,6 @@ body[data-theme='light'] #theme-switcher .fa-moon { display: none; }
 .sidenav a:hover { background-color: var(--accent-color); color: white; }
 
 .main-content { margin-left: 0; position: relative; z-index: 2; transition: margin-left 0.5s; }
-.main-content.shifted { margin-left: var(--sidenav-width); }
 .content-wrapper { max-width: 1000px; margin: 0 auto; padding: 2rem; }
 
 header {
@@ -429,10 +428,6 @@ footer { text-align: center; padding: 2rem 0; color: var(--secondary-text-color)
     }
 }
 
-@media screen and (max-width: 992px) { 
-    .main-content.shifted { margin-left: 0; } 
-}
-
 .tech-stack {
     color: var(--secondary-text-color);
     font-size: 0.9rem;
@@ -576,4 +571,11 @@ footer { text-align: center; padding: 2rem 0; color: var(--secondary-text-color)
 /* Class to be toggled by JavaScript to show the menu */
 .dropdown-content.show {
     display: block;
+}
+
+/* Apply the content shift ONLY on screens wider than 992px */
+@media screen and (min-width: 993px) {
+    .main-content.shifted {
+        margin-left: var(--sidenav-width);
+    }
 }
