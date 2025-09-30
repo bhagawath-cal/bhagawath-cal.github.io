@@ -15,22 +15,40 @@
 </head>
 <body id="main-body">
     <div id="p5-canvas-container"></div>
-    <script src="sketch.js"></script>
 
     <button id="menu-toggle">☰</button>
+
     <button id="theme-switcher">
         <i class="fas fa-sun"></i>
         <i class="fas fa-moon"></i>
     </button>
+        
+    <div class="split-button-container" id="bg-controls-container">
+        <button id="bg-cycler-btn" class="split-button-main">
+            <i class="fas fa-magic"></i>
+        </button>
+        <button id="bg-selector-btn" class="split-button-arrow">
+            <i class="fas fa-chevron-down"></i>
+        </button>
+        <ul class="dropdown-content" id="bg-options">
+            <li data-mode="1">Floating Particles</li>
+            <li data-mode="2">Connecting Lines</li>
+            <li data-mode="3">Interactive Field</li>
+            <li data-mode="4">Brownian Motion</li>
+            <li data-mode="5">Orbital Vortex</li>
+            <li data-mode="6">Falling Stars</li>
+        </ul>
+    </div>
 
     <nav class="sidenav" id="mySidenav">
         <ul>
             <li><a href="#info">About me</a></li>
             <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li> <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
             <li><a href="#certifications">Certifications</a></li>
             <li><a href="#skills">Skills</a></li>
-        </ul>
+            <li><a href="#photography">Photography</a></li> </ul>
     </nav>
 
     <div class="main-content" id="main">
@@ -38,7 +56,9 @@
             <header id="info">
                 <div class="header-content">
                     <div class="profile-picture-container">
-                        <img src="profile.jpg" alt="Bhagawath Venkat Kantamneni">
+                        <img src="profile1.jpg" alt="Bhagawath Venkat Kantamneni 1" class="profile-image active">
+                        <img src="profile2.jpg" alt="Bhagawath Venkat Kantamneni 2" class="profile-image">
+                        <img src="profile3.jpg" alt="Bhagawath Venkat Kantamneni 2" class="profile-image">
                     </div>
                     <div class="header-text">
                         <h1>Bhagawath Venkat Kantamneni</h1>
@@ -351,6 +371,57 @@
                         </div>
                     </div>
                 </section>
+
+                <section id="photography">
+                    <h2>Photography</h2>
+                    <div class="photo-grid">
+                        <div class="photo-item">
+                            <img src="gallery/photo1.jpg" alt="Description of photo 1">
+                        </div>
+                        <div class="photo-item">
+                            <img src="gallery/photo2.jpg" alt="Description of photo 2">
+                        </div>
+                        <div class="photo-item">
+                            <img src="gallery/photo3.jpg" alt="Description of photo 3">
+                        </div>
+                        <div class="photo-item">
+                            <img src="gallery/photo4.jpg" alt="Description of photo 4">
+                        </div>
+                        <div class="photo-item">
+                            <img src="gallery/photo5.jpg" alt="Description of photo 5">
+                        </div>
+                        <div class="photo-item">
+                            <img src="gallery/photo6.jpg" alt="Description of photo 6">
+                        </div>
+                        <div class="photo-item">
+                            <img src="gallery/photo7.jpg" alt="Description of photo 7">
+                        </div>
+                        <div class="photo-item">
+                            <img src="gallery/photo8.jpg" alt="Description of photo 8">
+                        </div>
+                        <div class="photo-item">
+                            <img src="gallery/photo9.jpg" alt="Description of photo 9">
+                        </div>
+                        <div class="photo-item">
+                            <img src="gallery/photo10.jpg" alt="Description of photo 10">
+                        </div>
+                        <div class="photo-item">
+                            <img src="gallery/photo11.jpg" alt="Description of photo 11">
+                        </div>
+                        <div class="photo-item">
+                            <img src="gallery/photo12.jpg" alt="Description of photo 12">
+                        </div>
+                        <div class="photo-item">
+                            <img src="gallery/photo13.jpg" alt="Description of photo 13">
+                        </div>
+                        <div class="photo-item">
+                            <img src="gallery/photo14.jpg" alt="Description of photo 14">
+                        </div>
+                        <div class="photo-item">
+                            <img src="gallery/photo15.jpg" alt="Description of photo 15">
+                        </div>
+                        </div>
+                </section>
             </main>
 
             <footer>
@@ -358,6 +429,13 @@
             </footer>
         </div>
     </div>
+
+    <div id="lightbox" class="lightbox-hidden">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script src="sketch.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

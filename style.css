@@ -56,6 +56,64 @@ a:hover { color: var(--primary-text-color); }
     cursor: pointer;
 }
 
+.split-button-container {
+    position: fixed;
+    top: 15px;
+    right: 70px; /* Position the whole group */
+    z-index: 1001;
+    display: flex; /* Place buttons side-by-side */
+}
+
+.split-button-main, .split-button-arrow {
+    background: var(--card-bg-color);
+    color: var(--primary-text-color);
+    border: 1px solid var(--border-color);
+    height: 45px;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.split-button-main {
+    width: 45px;
+    font-size: 18px;
+    /* Rounded corners only on the left side */
+    border-radius: 4px 0 0 4px;
+}
+
+/* Style for the arrow part */
+.split-button-arrow {
+    width: 35px;
+    font-size: 16px;
+    /* No left border, so it merges with the wand button */
+    border-left: none;
+    /* Rounded corners only on the right side */
+    border-radius: 0 4px 4px 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute; /* Position relative to the container */
+    top: 100%; /* Appear directly below the button */
+    right: 0; /* Align to the right edge of the container */
+    margin-top: 5px; /* Small gap */
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    min-width: 180px;
+    list-style: none;
+    padding: 5px 0;
+    z-index: 1002;
+}
+
+.dropdown-content li { color: var(--secondary-text-color); padding: 10px 15px; text-decoration: none; display: block; cursor: pointer; font-size: 0.9rem; }
+.dropdown-content li:hover { background-color: var(--accent-color); color: white; }
+.dropdown-content.show { display: block; }
+
 #menu-toggle { left: 15px; font-size: 24px; }
 #theme-switcher { right: 15px; font-size: 20px; overflow: hidden; }
 
@@ -92,13 +150,31 @@ header {
     width: 100%;
 }
 
+/* --- Profile Picture Slideshow Styles --- */
+
 .profile-picture-container {
+    position: relative; /* Establish a positioning context for the images */
     width: 250px;
     height: 250px;
     border-radius: 50%;
     overflow: hidden;
     border: 4px solid var(--accent-color);
     flex-shrink: 0;
+}
+
+.profile-image {
+    position: absolute; /* Stack images on top of each other */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0; /* Make all images invisible by default */
+    transition: opacity 0.5s ease-in-out; /* Add a smooth fade transition */
+}
+
+.profile-image.active {
+    opacity: 1; /* Make only the active image visible */
 }
 
 .profile-picture-container img {
@@ -377,4 +453,127 @@ footer { text-align: center; padding: 2rem 0; color: var(--secondary-text-color)
 
 .project-links a i {
     margin-right: 0.5rem;
+}
+
+/* --- PHOTOGRAPHY & LIGHTBOX STYLES --- */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.photo-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    user-select: none;      /* prevent text/image selection */
+    -webkit-user-drag: none; /* stop drag ghost image in WebKit browsers */
+}
+
+
+.photo-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Lightbox styles */
+#lightbox.lightbox-hidden {
+    display: none !important;
+}
+
+#lightbox {
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 85%;
+    border-radius: 8px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.lightbox-close:hover {
+    color: #bbb;
+}
+
+/* --- Dropdown Styles for Background Switcher --- */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Style for the main magic wand button */
+.dropdown-btn {
+    position: fixed;
+    top: 15px;
+    right: 70px;
+    z-index: 1001;
+    background: var(--card-bg-color);
+    color: var(--primary-text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* The dropdown menu, hidden by default */
+.dropdown-content {
+    display: none;
+    position: fixed;
+    top: 65px; /* Position below the button */
+    right: 15px;
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    min-width: 180px;
+    list-style: none;
+    padding: 5px 0;
+    margin: 0;
+    z-index: 1002;
+}
+
+/* Individual options in the menu */
+.dropdown-content li {
+    color: var(--secondary-text-color);
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+/* Highlight option on hover */
+.dropdown-content li:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+/* Class to be toggled by JavaScript to show the menu */
+.dropdown-content.show {
+    display: block;
 }
