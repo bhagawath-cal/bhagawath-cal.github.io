@@ -27,7 +27,7 @@
         <ul>
             <li><a href="#info">About me</a></li>
             <li><a href="#experience">Experience</a></li>
-            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li> <li><a href="#education">Education</a></li>
             <li><a href="#certifications">Certifications</a></li>
             <li><a href="#skills">Skills</a></li>
         </ul>
@@ -111,6 +111,76 @@
                     </div>
                 </section>
 
+                <section id="projects">
+                    <h2>Projects</h2>
+                    <div class="card-grid">
+                        <div class="card">
+                            <h3>Memory-Enhanced Multimodal Chat Framework</h3>
+                            <p class="tech-stack">
+                                <strong>Technologies:</strong> Python, FAISS, PyTorch, Ollama, Whisper, FastAPI
+                            </p>
+                            <ul>
+                                <li>Developed a local-first, privacy-aware chat framework capable of handling images, audio, and text.</li>
+                                <li>Implemented a long-term memory system using a FAISS vector index and Gemini embeddings for context retention.</li>
+                                <li>Integrated multiple models for multimodal input: Ollama for vision, Whisper-large-v3 for audio, and DeepSeek for chat.</li>
+                                <li>Provided multiple user interfaces, including a command-line interface (CLI), a Tkinter GUI, and a REST API.</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://github.com/bhagawath-cal/EECS545-Final-Project" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <h3>WaldoGPT: AI Video Interaction</h3>
+                            <p class="tech-stack">
+                                <strong>Technologies:</strong> Python, Streamlit, OpenAI API, Whisper
+                            </p>
+                            <ul>
+                                <li>Developed a chatbot-style application to summarize, transcribe, and interact with YouTube videos up to one hour long.</li>
+                                <li>Users can upload videos from YouTube, which are then processed to provide a full transcription and summary.</li>
+                                <li>Employs OpenAI's Whisper for speech-to-text conversion and the OpenAI API to generate accurate, context-aware responses to user questions.</li>
+                                <li>The project initially explored Vid2Seq and Google Gemini before finalizing the current architecture.</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://github.com/bhagawath-cal/WaldoGPT" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <h3>Automatic License Plate Recognition</h3>
+                            <p class="tech-stack">
+                                <strong>Technologies:</strong> Python, Computer Vision, OpenCV, TensorFlow, YOLOv3
+                            </p>
+                            <ul>
+                                <li>Developed an end-to-end system to detect license plates in images and perform optical character recognition (OCR).</li>
+                                <li>Implemented and compared two plate detection methods: traditional contour detection and a modern YOLOv3 object detector.</li>
+                                <li>Trained a Convolutional Neural Network (CNN) to accurately recognize the segmented characters from the license plate.</li>
+                                <li>Engineered a hybrid model that boosted the final accuracy to over 90% by combining both detection methods.</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="#" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <h3>NLP Textbook Classifier</h3>
+                            <p class="tech-stack">
+                                <strong>Technologies:</strong> Python, NLP, TensorFlow, Scikit-learn, NLTK
+                            </p>
+                            <ul>
+                                <li>Developed a model to classify high school textbooks into subjects (Math, Biology, History) using only chapter titles.</li>
+                                <li>Implemented and compared various NLP techniques, including TF-IDF, Word2Vec, LSTMs, and Transformers.</li>
+                                <li>Achieved a peak classification accuracy of 91.67% with a custom-built Transformer model.</li>
+                                <li>Performed comprehensive data preprocessing and text cleaning using the NLTK library.</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://github.com/bhagawath-cal/NLP--Textbook-Classifier" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
                 <section id="certifications">
                     <h2>Certifications & Specializations</h2>
 
@@ -135,26 +205,43 @@
                     </div>
                     
                     <div class="card collapsible">
-                        <h3>Financial Engineering and Risk Management <i class="fas fa-chevron-down"></i></h3>
+                        <h3>Columbia University - Financial Engineering and Risk Management <i class="fas fa-chevron-down"></i></h3>
                     </div>
                      <div class="cert-content">
                         <ul>
-                            <li><a href="certs/EITC-AI-ADL.pdf" target="_blank">EITC/AI/ADL Advanced Deep Learning <i class="fas fa-file-pdf"></i></a></li>
+                            <li><a href="certs/Coursera_7I2OJNHL0MV6.pdf" target="_blank">Optimization Methods in Asset Management<i class="fas fa-file-pdf"></i></a></li>
+                            <li><a href="certs/Coursera_F3JUOFU80XTR.pdf" target="_blank">Advanced Topics in Derivative Pricing<i class="fas fa-file-pdf"></i></a></li>
+                            <li><a href="certs/Coursera_GBCNRFPY8BVT.pdf" target="_blank">Term-Structure and Credit Derivatives<i class="fas fa-file-pdf"></i></a></li>
+                            <li><a href="certs/Coursera_QF4AZR78RAFM.pdf" target="_blank">Computational Methods in Pricing and Model Calibration<i class="fas fa-file-pdf"></i></a></li>
+                            <li><a href="certs/Coursera_VCS0YJ2J4ZTK.pdf" target="_blank">Introduction to Financial Engineering and Risk Management<i class="fas fa-file-pdf"></i></a></li>
                         </ul>
                     </div>
 
                     <div class="card collapsible">
-                        <h3>Finance & Quantitative Modeling for Analysts <i class="fas fa-chevron-down"></i></h3>
-                    </div>
+                        <h3>Wharton School, University of Pennsylvania - Finance & Quantitative Modeling for Analysts <i class="fas fa-chevron-down"></i></h3>
+                    </div> 
                     <div class="cert-content">
                         <ul>
                             <li><a href="certs/Coursera-7E23H7A89WQZ.pdf" target="_blank">Introduction to Corporate Finance<i class="fas fa-file-pdf"></i></a></li>
+                            <li><a href="certs/Coursera-9SEDRGJUYF4A.pdf" target="_blank">Introduction to Spreadsheets and Models<i class="fas fa-file-pdf"></i></a></li>
+                            <li><a href="certs/Coursera-32R3V2BLMSF9.pdf" target="_blank">Fundamentals of Quantitative Modeling<i class="fas fa-file-pdf"></i></a></li>
+                            <li><a href="certs/Coursera-GVBWYJEHCQLW.pdf" target="_blank">Financial Acumen for Non-Financial Managers<i class="fas fa-file-pdf"></i></a></li>
                         </ul>
                     </div>
 
+                        <div class="card">
+                            <li>
+                                <a href="certs/Coursera-WWY1G2P1Z4U8.pdf" target="_blank">
+                                    Introduction to Google SEO <i class="fas fa-file-pdf"></i>
+                                </a>
+                            </li>
+                        </div>
+                        <div style="height: 16px;"></div>
+
                     <div class="card">
-                        <h3>Introduction to Google SEO</h3>
+                        <li><a href="certs/Coursera-BA32YJT5FJ8J.pdf" target="_blank">Financial Markets <i class="fas fa-file-pdf"></i></a></li>
                     </div>
+
                 </section>
 
                 <section id="skills">

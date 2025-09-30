@@ -356,3 +356,25 @@ footer { text-align: center; padding: 2rem 0; color: var(--secondary-text-color)
 @media screen and (max-width: 992px) { 
     .main-content.shifted { margin-left: 0; } 
 }
+
+.tech-stack {
+    color: var(--secondary-text-color);
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-top: -10px;
+}
+
+.project-links {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.project-links a {
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.project-links a i {
+    margin-right: 0.5rem;
+}
