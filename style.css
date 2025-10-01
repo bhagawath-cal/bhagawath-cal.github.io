@@ -426,6 +426,32 @@ footer { text-align: center; padding: 2rem 0; color: var(--secondary-text-color)
     .social-links a {
         margin: 0 1rem;
     }
+
+    .profile-picture-container {
+        width: 140px;
+        height: 140px;
+        border-width: 3px;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 0.3rem;
+    }
+    h2 {
+        font-size: 1.3rem;
+        margin-bottom: 1.2rem;
+        padding-bottom: 0.3rem;
+    }
+    .main-content {
+        padding: 1rem 0.5rem;   
+    }
+    .content-wrapper {
+        padding: 1rem;
+    }
+    .subtitle {
+        font-size: 1rem;
+        margin: 0.7rem 0;
+    }
 }
 
 .tech-stack {
