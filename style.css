@@ -605,20 +605,3 @@ footer { text-align: center; padding: 2rem 0; color: var(--secondary-text-color)
         margin-left: var(--sidenav-width);
     }
 }
-
-/* Force centering on small screens */
-@media screen and (max-width: 600px) {
-    .main-content,
-    .header-content,
-    .header-text {
-        margin-left: auto !important;
-        margin-right: auto !important;
-        text-align: center !important;
-        max-width: 95vw !important;
-    }
-    .header-content {
-        flex-direction: column !important;
-        align-items: center !important;
-        justify-content: center !important;
-    }
-}
