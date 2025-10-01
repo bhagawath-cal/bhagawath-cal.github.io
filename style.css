@@ -374,8 +374,8 @@ section { padding: 4rem 0; }
 .stepper-line {
     position: absolute;
     top: 50%;
-    left: 0;
-    right: 0;
+    left: 25px;
+    right: 25px;
     height: 2px;
     background-color: var(--border-color);
     transform: translateY(-50%);
@@ -440,10 +440,10 @@ footer { text-align: center; padding: 2rem 0; color: var(--secondary-text-color)
         padding: 0 0.5rem;
     }
     .skill-item {
-        font-size: 0.9rem;
-        gap: 0.5rem;
-        flex-basis: calc(50% - 1rem);
-        justify-content: center;
+    font-size: 0.9rem;
+    gap: 0.5rem;
+    flex-basis: calc(50% - 0.5rem); /* Corrected calculation */
+    justify-content: center;
     }
     .skill-item i {
         font-size: 1.4rem;
@@ -486,10 +486,10 @@ footer { text-align: center; padding: 2rem 0; color: var(--secondary-text-color)
         padding-bottom: 0.3rem;
     }
     .main-content {
-        padding: 1rem 0.5rem;   
+    padding: 1rem 0; /* Changed 0.5rem to 0 */
     }
     .content-wrapper {
-        padding: 1rem;
+    padding: 1rem 1.5rem; /* Give it consistent side padding */
     }
     .subtitle {
         font-size: 1rem;
@@ -642,20 +642,6 @@ footer { text-align: center; padding: 2rem 0; color: var(--secondary-text-color)
     display: block;
 }
 
-/* --- Mobile Fixes for Skills Section --- */
-@media screen and (max-width: 768px) {
-    .skill-group {
-        /* Reduces the space between icons on mobile */
-        gap: 1.5rem 1rem;
-    }
-
-    .skill-item p {
-        /* Makes the text for each skill slightly smaller */
-        font-size: 0.9rem;
-    }
-
-    #skills h2 {
-        /* Reduces the main section title size */
-        font-size: 2rem;
-    }
+.main-content.shifted {
+    margin-left: var(--sidenav-width);
 }
