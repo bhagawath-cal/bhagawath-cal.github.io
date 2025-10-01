@@ -642,9 +642,20 @@ footer { text-align: center; padding: 2rem 0; color: var(--secondary-text-color)
     display: block;
 }
 
-/* Apply the content shift ONLY on screens wider than 992px */
-@media screen and (min-width: 993px) {
-    .main-content.shifted {
-        margin-left: var(--sidenav-width);
+/* --- Mobile Fixes for Skills Section --- */
+@media screen and (max-width: 768px) {
+    .skill-group {
+        /* Reduces the space between icons on mobile */
+        gap: 1.5rem 1rem;
+    }
+
+    .skill-item p {
+        /* Makes the text for each skill slightly smaller */
+        font-size: 0.9rem;
+    }
+
+    #skills h2 {
+        /* Reduces the main section title size */
+        font-size: 2rem;
     }
 }
