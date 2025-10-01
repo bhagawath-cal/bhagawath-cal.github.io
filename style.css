@@ -9,7 +9,7 @@
     --sidenav-width: 220px;
 }
 
-body[data-theme='light'] {
+html[data-theme='light'] {
     --bg-color: #f4f4f5;
     --primary-text-color: #18181b;
     --secondary-text-color: #52525b;
@@ -120,8 +120,8 @@ a:hover { color: var(--primary-text-color); }
 #theme-switcher .fa-sun { display: none; }
 #theme-switcher .fa-moon { display: block; }
 
-body[data-theme='light'] #theme-switcher .fa-sun { display: block; }
-body[data-theme='light'] #theme-switcher .fa-moon { display: none; }
+html[data-theme='light'] #theme-switcher .fa-sun { display: block; }
+html[data-theme='light'] #theme-switcher .fa-moon { display: none; }
 
 .sidenav { height: 100%; width: 0; position: fixed; z-index: 1000; top: 0; left: 0; background-color: var(--bg-color); border-right: 1px solid var(--border-color); overflow-x: hidden; padding-top: 80px; transition: 0.5s; white-space: nowrap; }
 .sidenav.open { width: var(--sidenav-width); }

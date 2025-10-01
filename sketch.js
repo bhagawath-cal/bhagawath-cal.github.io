@@ -31,7 +31,7 @@ function draw() {
     let bgColor = bodyStyle.getPropertyValue('--bg-color').trim();
     background(bgColor ? bgColor : [18, 18, 18]);
 
-    let isLightTheme = document.body.getAttribute('data-theme') === 'light';
+    let isLightTheme = document.documentElement.getAttribute('data-theme') === 'light';
     let particleColor = isLightTheme ? color(0, 150) : color(255, 150);
     let lineColor = isLightTheme ? 0 : 255;
 

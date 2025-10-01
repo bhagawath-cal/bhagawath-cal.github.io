@@ -14,30 +14,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // --- Theme Switcher ---
     const themeSwitcher = document.getElementById('theme-switcher');
-    const body = document.getElementById('main-body');
-    
-    if (themeSwitcher && body) {
-        const currentTheme = localStorage.getItem('theme');
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const htmlElement = document.documentElement;
 
-        // Set initial theme
-        if (currentTheme === 'light') {
-            body.setAttribute('data-theme', 'light');
-        } else if (currentTheme === 'dark') {
-            body.removeAttribute('data-theme');
-        } else if (prefersDark) {
-            body.removeAttribute('data-theme');
-        } else {
-            body.setAttribute('data-theme', 'light');
-        }
-
-        // Add click listener
+    if (themeSwitcher) {
+        // The click listener is now the only logic needed here
         themeSwitcher.addEventListener('click', () => {
-            if (body.getAttribute('data-theme') === 'light') {
-                body.removeAttribute('data-theme');
+            if (htmlElement.getAttribute('data-theme') === 'light') {
+                htmlElement.removeAttribute('data-theme');
                 localStorage.setItem('theme', 'dark');
             } else {
-                body.setAttribute('data-theme', 'light');
+                htmlElement.setAttribute('data-theme', 'light');
                 localStorage.setItem('theme', 'light');
             }
         });
