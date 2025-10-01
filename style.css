@@ -487,6 +487,34 @@ footer { text-align: center; padding: 2rem 0; color: var(--secondary-text-color)
         font-size: 1rem;
         margin: 0.7rem 0;
     }
+
+    #menu-toggle {
+        left: 10px;
+        top: 10px;
+    }
+
+    /* Keep theme switcher in the top-right */
+    #theme-switcher {
+        right: 10px;
+        top: 10px;
+        transform: scale(0.9);   /* shrink slightly */
+    }
+
+    /* Background effect switcher group */
+    .split-button-container,
+    .dropdown-btn {
+        right: 60px;             /* tuck in closer than 70px */
+        top: 10px;
+        transform: scale(0.9);
+    }
+
+    /* Prevent any floating button from causing sideways scroll */
+    #theme-switcher,
+    .split-button-container,
+    .dropdown-btn {
+        max-width: calc(100% - 20px);
+        overflow-x: hidden;
+    }
 }
 
 .tech-stack {
