@@ -130,7 +130,13 @@ html[data-theme='light'] #theme-switcher .fa-moon { display: none; }
 .sidenav a:hover { background-color: var(--accent-color); color: white; }
 
 .main-content { margin-left: 0; position: relative; z-index: 2; transition: margin-left 0.5s; }
-.content-wrapper { max-width: 1000px; margin: 0 auto; padding: 2rem; }
+.content-wrapper { 
+    max-width: 1000px; 
+    margin: 0 auto; 
+    padding: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+}
 
 header {
     min-height: 100vh;
@@ -139,6 +145,7 @@ header {
     justify-content: center;
     align-items: center;
     padding: 2rem 0;
+    width: 100%;
 }
 
 .header-content {
@@ -419,18 +426,33 @@ footer { text-align: center; padding: 2rem 0; color: var(--secondary-text-color)
     .header-content {
         flex-direction: column;
         text-align: center;
+        padding: 0 1rem;
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0 auto;
     }
     .header-text {
         text-align: center;
+        width: 100%;
+        max-width: 100%;
+        padding: 0 1rem;
+        box-sizing: border-box;
+        margin: 0 auto;
+    }
+    .social-links {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 1.5rem auto;
     }
     .social-links a {
         margin: 0 1rem;
     }
-
     .profile-picture-container {
         width: 140px;
         height: 140px;
         border-width: 3px;
+        margin: 0 auto;
     }
 
     h1 {
