@@ -15,6 +15,18 @@ document.addEventListener('DOMContentLoaded', function() {
     // --- Theme Switcher ---
     const themeSwitcher = document.getElementById('theme-switcher');
     const htmlElement = document.documentElement;
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    // Listen for system/browser color scheme changes
+    prefersDarkScheme.addEventListener('change', (e) => {
+        const savedTheme = localStorage.getItem('theme');
+        if (!savedTheme) {
+            if (e.matches) {
+                htmlElement.removeAttribute('data-theme'); // dark mode
+            } else {
+                htmlElement.setAttribute('data-theme', 'light'); // light mode
+            }
+        }
+    });
 
     if (themeSwitcher) {
         // The click listener is now the only logic needed here
