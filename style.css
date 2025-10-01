@@ -130,11 +130,10 @@ html[data-theme='light'] #theme-switcher .fa-moon { display: none; }
 .sidenav a:hover { background-color: var(--accent-color); color: white; }
 
 .main-content { margin-left: 0; position: relative; z-index: 2; transition: margin-left 0.5s; }
-.content-wrapper { 
-    max-width: 1000px; 
-    margin: 0 auto; 
-    padding: 2rem;
-    width: 100%;
+.content-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem; /* Set vertical and horizontal padding */
     box-sizing: border-box;
 }
 
@@ -429,11 +428,9 @@ footer { text-align: center; padding: 2rem 0; color: var(--secondary-text-color)
 @media screen and (max-width: 768px) {
     .header-content {
         flex-direction: column;
+        align-items: center;   /* NEW: centers children horizontally */
         text-align: center;
-        padding: 0 1rem;
-        width: 100%;
-        box-sizing: border-box;
-        margin: 0 auto;
+        gap: 1.5rem;           /* Reduce spacing for mobile */
     }
     .skill-group {
         gap: 1.5rem;
@@ -453,12 +450,10 @@ footer { text-align: center; padding: 2rem 0; color: var(--secondary-text-color)
         text-align: left;
     }
     .header-text {
-        text-align: center;
-        width: 100%;
-        max-width: 100%;
+        text-align: center;    /* Override left alignment */
+        max-width: 100%;       /* Prevent shrinking to 600px */
         padding: 0 1rem;
-        box-sizing: border-box;
-        margin: 0 auto;
+        margin: 0 auto;        /* Center the block */
     }
     .social-links {
         width: 100%;
@@ -470,10 +465,7 @@ footer { text-align: center; padding: 2rem 0; color: var(--secondary-text-color)
         margin: 0 1rem;
     }
     .profile-picture-container {
-        width: 140px;
-        height: 140px;
-        border-width: 3px;
-        margin: 0 auto;
+        margin: 0 auto;        /* Ensures image centers */
     }
 
     h1 {
@@ -489,7 +481,7 @@ footer { text-align: center; padding: 2rem 0; color: var(--secondary-text-color)
     padding: 1rem 0; /* Changed 0.5rem to 0 */
     }
     .content-wrapper {
-    padding: 1rem 1.5rem; /* Give it consistent side padding */
+    padding: 1rem;
     }
     .subtitle {
         font-size: 1rem;
