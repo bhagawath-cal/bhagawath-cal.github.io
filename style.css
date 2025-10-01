@@ -442,7 +442,7 @@ footer { text-align: center; padding: 2rem 0; color: var(--secondary-text-color)
     .skill-item {
     font-size: 0.9rem;
     gap: 0.5rem;
-    flex-basis: calc(50% - 0.5rem); /* Corrected calculation */
+    /* The flex-basis line has been deleted */
     justify-content: center;
     }
     .skill-item i {
